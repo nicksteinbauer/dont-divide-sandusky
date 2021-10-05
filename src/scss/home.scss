@@ -1,16 +1,26 @@
 // home page styles..
 
 .full-site-image {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  position: fixed;
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+  img {
+    position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+  }
 }
 
 .mystuff {
-  background: #fff;
+  background: rgba($color: #fff, $alpha: .8);
   position: relative;
+  -webkit-box-shadow: 0 0 20px 20px rgba(0,0,0,.1);
+  box-shadow: 0 0 20px 20px rgba(0,0,0,.1);
 }

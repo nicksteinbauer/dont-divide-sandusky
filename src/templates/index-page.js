@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Content, { HTMLContent } from '../components/Content'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 import Layout from '../components/Layout'
 //import Features from '../components/Features'
@@ -14,19 +15,18 @@ export const IndexPageTemplate = ({ image, title, description, content, contentC
 
 
     <div>
-      <div
-        className="full-site-image"
-        style={{
-          backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
-            })`,
-          backgroundPosition: `center center`,
-          backgroundAttachment: `fixed`,
-        }}
-      >
+      <div className="full-site-image">
+
+        <PreviewCompatibleImage
+          imageInfo={{
+            image: image.childImageSharp.fluid.src,
+            alt: "this is the alt",
+          }}
+        />
 
       </div>
 
-      <section className="mystuff inside-xxl">
+      <section className="mystuff inside-xl">
         <div className="padding-20">
           <h1 className="title">{title}</h1>
           <h3 className="subtitle">{description}</h3>
