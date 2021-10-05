@@ -2,21 +2,24 @@
 templateKey: index-page
 title: Don't Divide Sandusky
 image: /img/dont-divide-sandusky-background.jpg
-heading: Don't Divide Sandusky
-subheading: Issue 2 is Bad for Sandusky
-mainpitch:
-  title: Don't Divide Sandusky
-  description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  This is the new description
 ---
 
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+Issue 2 would unnecessarily change our current cohesive government structure into political fiefdoms.  Our current at-large City government system is working and change simply doesn’t make sense.
+
+In 2020, the Charter Review Committee studied Sandusky’s government structure.
+
+The Committee, made up of a cross-section of residents, business, and civic leaders, invited experts to testify about possible structural changes. The Commission studied and carefully deliberated proposed changes.  The Commission voted 11-2 against structural change. 
+
+A small group of proponents were not happy with that decision and now are working to overturn the informed, thorough and transparent decision-making of the Charter Review Committee. 
+
+Issue 2 would overturn the decisions of a deliberative, open, and transparent process and is driven by certain candidacies for city commission seats. 
+
+Don’t be fooled.  The current structure is working and Sandusky is making great progress. 
+
+Dividing Sandusky into wards would create unnecessary chaos, fiefdoms, and acrimony. 
+
+Sandusky is revitalizing throughout the city, including our neighborhoods, our schools, our roads, housing, and infrastructure.  Keep that progress going by defeating the politically-motivated Issue 2.
+
+Don’t divide Sandusky.  Together, Sandusky is moving forward.  
