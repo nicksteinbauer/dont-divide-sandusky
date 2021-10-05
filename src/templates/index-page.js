@@ -19,9 +19,8 @@ export const IndexPageTemplate = ({
     <div
       className="full-site-image"
       style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
+        backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          })`,
         backgroundPosition: `center center`,
         backgroundAttachment: `fixed`,
       }}
@@ -45,7 +44,7 @@ export const IndexPageTemplate = ({
       <p>{description}</p>
     </section>
 
-    
+
   </div>
 )
 
@@ -92,6 +91,7 @@ export default IndexPage
 export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      html
       frontmatter {
         title
         image {
@@ -108,20 +108,6 @@ export const pageQuery = graphql`
           description
         }
         description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
       }
     }
   }
