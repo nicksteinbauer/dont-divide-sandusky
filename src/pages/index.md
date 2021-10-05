@@ -2,6 +2,7 @@
 templateKey: index-page
 title: Don't Divide Sandusky
 image: /img/dont-divide-sandusky-background.jpg
+featuredimage: /img/dont-divide-sandusky-background.jpg
 description: >-
   This is the new description
 ---
