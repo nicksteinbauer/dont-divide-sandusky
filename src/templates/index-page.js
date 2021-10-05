@@ -1,78 +1,69 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import Content, { HTMLContent } from '../components/Content'
 
 import Layout from '../components/Layout'
 //import Features from '../components/Features'
 //import BlogRoll from '../components/BlogRoll'
 
-export const IndexPageTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
-}) => (
-  <div>
-    <div
-      className="full-site-image"
-      style={{
-        backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
-          })`,
-        backgroundPosition: `center center`,
-        backgroundAttachment: `fixed`,
-      }}
-    >
-      <div>
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen">
-          {title}
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
-          {subheading}
-        </h3>
+export const IndexPageTemplate = ({ image, title, description, content, contentComponent }) => {
+  const PageContent = contentComponent || Content
+
+  return (
+
+
+    <div>
+      <div
+        className="full-site-image"
+        style={{
+          backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
+            })`,
+          backgroundPosition: `center center`,
+          backgroundAttachment: `fixed`,
+        }}
+      >
+
       </div>
+
+      <section className="mystuff inside-xxl">
+        <div className="padding-20">
+          <h1 className="title">{title}</h1>
+          <h3 className="subtitle">{description}</h3>
+          <PageContent className="content" content={content} />
+        </div>
+      </section>
+
+
     </div>
 
-    <section className="mystuff">
-      <h1 className="title">{mainpitch.title}</h1>
-      <h3 className="subtitle">{mainpitch.description}</h3>
-      <div>{heading}</div>
-      <p>{description}</p>
-    </section>
+
+  )
+}
 
 
-  </div>
-)
+
+
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
   description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
+  content: PropTypes.string,
+  contentComponent: PropTypes.func,
 }
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-
+  const { markdownRemark: post } = data
   return (
     <Layout>
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
-        intro={frontmatter.intro}
+        contentComponent={HTMLContent}
+        content={post.html}
       />
     </Layout>
   )
@@ -100,12 +91,6 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid
             }
           }
-        }
-        heading
-        subheading
-        mainpitch {
-          title
-          description
         }
         description
       }
