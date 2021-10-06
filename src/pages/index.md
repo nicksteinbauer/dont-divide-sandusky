@@ -2,9 +2,9 @@
 templateKey: index-page
 title: Don't Divide Sandusky
 image: /img/dont-divide-sandusky-background.jpg
-topimage: /img/dont-divide-sandusky-background.jpg
+topimage: /img/No-Main-Logo.png
 description: >-
-  This is the new description
+  Issue 2 is Bad for Sandusky
 ---
 
 Issue 2 would unnecessarily change our current cohesive government structure into political fiefdoms.  Our current at-large City government system is working and change simply doesn’t make sense.

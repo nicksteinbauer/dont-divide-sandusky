@@ -8,19 +8,79 @@
   height: 200%;
   img {
     position: absolute; 
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0; 
-  margin: auto; 
-  min-width: 50%;
-  min-height: 50%;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
   }
 }
 
 .mystuff {
-  background: rgba($color: #fff, $alpha: .8);
+  background: #a22135;
   position: relative;
   -webkit-box-shadow: 0 0 20px 20px rgba(0,0,0,.1);
   box-shadow: 0 0 20px 20px rgba(0,0,0,.1);
+  
+}
+.center-this {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  @media screen and (min-width: $screen-md) {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+
+.modal-dialog {
+  max-width: 992px !important;
+  margin: 20px;
+  h1 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @media screen and (min-width: $screen-md) and (orientation: portrait) {
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $screen-md) and (orientation: landscape) {
+    margin: 40px auto;
+  }
+}
+
+.modal-content {
+  position: relative;
+  .modal-header {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    z-index: 10;
+    border-bottom: none;
+  }
+}
+
+.buttons {
+  button {
+    margin: 20px;
+  }
+}
+.btn-warning {
+  background: #fff;
+  color: #a22135;
+}
+
+label.padding {
+  display: block;
 }
